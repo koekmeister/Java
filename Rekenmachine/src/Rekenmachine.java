@@ -1,10 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class Rekenmachine extends JFrame {
     public static void main(String [] args) {
         JFrame frame = new Rekenmachine();
-        frame.setSize(300, 500);
+        frame.setSize(300, 400);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setTitle("Rekenmachine");
         JPanel paneel = new RekenPaneel();
@@ -16,13 +17,13 @@ public class Rekenmachine extends JFrame {
 class RekenPaneel extends JPanel {
     private JTextField tekstvak;
     private JButton knop7, knop8, knop9,
-                    knop4, knop5, knop6,
-                    knop3, knop2, knop1,
-                    knopPlus, knopMin, knopKeer, knop0,
-                    knopDeel, clear, knopIs;
+            knop4, knop5, knop6,
+            knop3, knop2, knop1,
+            knopPlus, knopMin, knopKeer, knop0,
+            knopDeel, clear, knopIs;
 
-    public RekenPaneel(){
-        // door setLayout te gebruiken heb ik zelf de controle over waar de knoppen en tekstvak komen
+    public RekenPaneel() {
+        // door deze setLayout te gebruiken heb ik zelf de controle over waar de knoppen en tekstvak komen
         // dit vergt wel meer werk.
         setLayout(null);
 
@@ -48,26 +49,25 @@ class RekenPaneel extends JPanel {
         // knoppen en tekstvak komen hier op de juiste positie.
 
         tekstvak.setBounds(20, 30, 235, 30);
-        knop7.setBounds(20,80, 55, 50);
+        knop7.setBounds(20, 80, 55, 50);
         knop8.setBounds(80, 80, 55, 50);
-        knop9.setBounds( 140, 80, 55, 50);
+        knop9.setBounds(140, 80, 55, 50);
         knopDeel.setBounds(200, 80, 55, 50);
 
-        knop4.setBounds(20,140, 55, 50);
+        knop4.setBounds(20, 140, 55, 50);
         knop5.setBounds(80, 140, 55, 50);
-        knop6.setBounds( 140, 140, 55, 50);
+        knop6.setBounds(140, 140, 55, 50);
         knopKeer.setBounds(200, 140, 55, 50);
 
-        knop1.setBounds(20,200, 55, 50);
+        knop1.setBounds(20, 200, 55, 50);
         knop2.setBounds(80, 200, 55, 50);
-        knop3.setBounds( 140, 200, 55, 50);
+        knop3.setBounds(140, 200, 55, 50);
         knopPlus.setBounds(200, 200, 55, 50);
 
-        knop0.setBounds(20,260, 55, 50);
+        knop0.setBounds(20, 260, 55, 50);
         clear.setBounds(80, 260, 55, 50);
-        knopIs.setBounds( 140, 260, 55, 50);
+        knopIs.setBounds(140, 260, 55, 50);
         knopMin.setBounds(200, 260, 55, 50);
-
 
 
         add(tekstvak);
@@ -88,6 +88,6 @@ class RekenPaneel extends JPanel {
         add(knopIs);
         add(knopMin);
 
-        //At the underside of the Calculator there wil be a link of the company were  it is made for
+
     }
 }
